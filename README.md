@@ -57,40 +57,6 @@ NEXUS-Hardware-Gaming-Premium-shop/
 - **Node.js** (versione 14 o superiore)
 - **npm** (incluso con Node.js)
 
-### Passaggi
-
-1. **Clona il repository**
-
-   ```bash
-   git clone https://github.com/Luis-Miha/NEXUS-Hardware-Gaming-Premium-shop.git
-   cd NEXUS-Hardware-Gaming-Premium-shop
-   ```
-
-2. **Installa le dipendenze**
-
-   ```bash
-   npm install
-   ```
-
-3. **Avvia il server di sviluppo**
-
-   ```bash
-   npm run dev
-   ```
-
-4. **Apri il browser**
-   ```
-   http://localhost:3000
-   ```
-
-## 📜 Comandi NPM
-
-| Comando         | Descrizione                               |
-| --------------- | ----------------------------------------- |
-| `npm run dev`   | Avvia il server di sviluppo su porta 3000 |
-| `npm start`     | Alias per `npm run dev`                   |
-| `npm run build` | Nessun build necessario (sito statico)    |
-
 ## 🛍️ Categorie Prodotti
 
 - **RAM** - Memorie DDR5 ad alte prestazioni (G.Skill, Corsair, Kingston, Crucial)
@@ -148,25 +114,6 @@ NEXUS-Hardware-Gaming-Premium-shop/
 - **Font Family**: Inter (Google Fonts)
 - **Pesi**: 400, 500, 600, 700
 
-## 🔧 Configurazione
-
-### package.json
-
-```json
-{
-  "name": "nexus-gaming",
-  "version": "0.1.0",
-  "scripts": {
-    "dev": "npx serve public -l 3000",
-    "build": "echo 'Static site - no build needed'",
-    "start": "npx serve public -l 3000"
-  },
-  "dependencies": {
-    "serve": "^14.2.0"
-  }
-}
-```
-
 ## 📱 Responsive Design
 
 Il sito è ottimizzato per:
@@ -175,14 +122,6 @@ Il sito è ottimizzato per:
 - **Tablet**: Grid adattiva e navigazione compatta
 - **Mobile**: Menu hamburger e layout single-column
 
-## 🛡️ Best Practices
-
-- ✅ HTML semantico e accessibile
-- ✅ CSS organizzato e manutenibile
-- ✅ JavaScript modulare (ES6 Modules)
-- ✅ Lazy loading immagini
-- ✅ Performance ottimizzata
-- ✅ SEO-friendly (meta tags)
 
 ## 📈 Funzionalità Future
 
@@ -200,10 +139,6 @@ Il sito è ottimizzato per:
 **Luis Mihalache**
 
 - GitHub: [@Luis-Miha](https://github.com/Luis-Miha)
-
-## 📄 Licenza
-
-Questo progetto è distribuito sotto licenza MIT.
 
 ---
 
