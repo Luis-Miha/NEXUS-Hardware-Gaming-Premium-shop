@@ -2,6 +2,8 @@
 
 ![NEXUS Logo](https://img.shields.io/badge/NEXUS-Hardware_Gaming_Premium-blue?style=for-the-badge&logo=gamejolt)
 
+🔗 **[LIVE DEMO](https://nexus-hardware-gaming-premium-shop.vercel.app/)**
+
 ## 🎮 Descrizione del Progetto
 
 **NEXUS** è un e-commerce moderno e responsive per la vendita di hardware gaming premium. Il sito offre un'esperienza di acquisto fluida e intuitiva per appassionati di gaming e professionisti alla ricerca di componenti PC di alta qualità.
