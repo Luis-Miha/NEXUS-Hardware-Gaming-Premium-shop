@@ -1,0 +1,260 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="NEXUS - Hardware e componenti PC gaming premium. RAM, GPU, console e accessori."
+    />
+    <title id="productTitle">NEXUS | Prodotto</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-container">
+        <a href="index.html" class="logo">NEXUS</a>
+        <nav class="nav">
+          <a href="index.html" class="nav-link">PC Components</a>
+          <a href="index.html" class="nav-link">Console</a>
+          <a href="index.html" class="nav-link">Periferiche</a>
+          <a href="index.html" class="nav-link">Monitor</a>
+          <a href="index.html" class="nav-link">Offerte</a>
+        </nav>
+        <div class="header-actions">
+          <button class="icon-btn search-btn" aria-label="Cerca">
+            <!--disegno lente di ricerca-->
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+          <button class="icon-btn" aria-label="Account">
+            <!--disegno persona/account-->
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </button>
+          <button class="icon-btn cart-btn" aria-label="Carrello">
+            <!--disegno shopping bag-->
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"
+              ></path>
+              <path d="M3 6h18"></path>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="cart-count">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-modal">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Cerca prodotti..."
+          autofocus
+        />
+        <button class="close-search" id="closeSearch">
+          <!--disegno X per chiudere-->
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <main>
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>></span>
+        <span id="breadcrumbCategory">Categoria</span>
+        <span>></span>
+        <span id="breadcrumbProduct">Prodotto</span>
+      </nav>
+
+      <!-- Product Detail -->
+      <section class="product-detail">
+        <div class="product-detail-container">
+          <div class="product-image-large">
+            <img id="productImage" src="" alt="" loading="lazy" />
+          </div>
+          <div class="product-info-large">
+            <div class="product-brand-large" id="productBrand">Brand</div>
+            <h1 class="product-name-large" id="productName">Product Name</h1>
+            <p class="product-specs-large" id="productSpecs">Specs</p>
+
+            <div class="product-rating-large">
+              <span class="stars-large" id="productStars">★★★★★</span>
+              <span class="rating-count-large" id="productReviews"
+                >(0 recensioni)</span
+              >
+            </div>
+
+            <div class="product-price-large">
+              <span class="price-current-large" id="productPrice">€0.00</span>
+              <span
+                class="price-original-large"
+                id="productOriginalPrice"
+              ></span>
+            </div>
+
+            <div class="product-actions-large">
+              <button class="add-to-cart-large" id="addToCartBtn">
+                Aggiungi al carrello
+              </button>
+              <button class="buy-now" id="buyNowBtn">Acquista ora</button>
+            </div>
+
+            <p class="product-description" id="productDescription">
+              Descrizione del prodotto...
+            </p>
+
+            <div class="product-features">
+              <h3>Caratteristiche Principali</h3>
+              <ul id="productFeatures">
+                <!-- Features will be inserted here -->
+              </ul>
+            </div>
+
+            <div class="product-compatibility">
+              <h3>Compatibilità</h3>
+              <p id="productCompatibility">Compatibilità...</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Related Products -->
+      <section class="related-products">
+        <h2>Prodotti Simili</h2>
+        <div class="products-grid" id="relatedProductsGrid">
+          <!-- Related products will be inserted here -->
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="logo">NEXUS</a>
+            <p>
+              Hardware gaming premium dal 2020. Componenti di alta qualita per
+              gamer e professionisti.
+            </p>
+          </div>
+          <div class="footer-links">
+            <h4>Prodotti</h4>
+            <a href="index.html">RAM</a>
+            <a href="index.html">Schede Video</a>
+            <a href="index.html">Processori</a>
+            <a href="index.html">SSD & Storage</a>
+            <a href="index.html">Console</a>
+          </div>
+          <div class="footer-links">
+            <h4>Supporto</h4>
+            <a href="#">Contattaci</a>
+            <a href="#">FAQ</a>
+            <a href="#">Spedizioni</a>
+            <a href="#">Resi</a>
+            <a href="#">Garanzia</a>
+          </div>
+          <div class="footer-links">
+            <h4>Azienda</h4>
+            <a href="#">Chi siamo</a>
+            <a href="#">Lavora con noi</a>
+            <a href="#">Privacy</a>
+            <a href="#">Termini</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 NEXUS. Tutti i diritti riservati.</p>
+          <div class="payment-icons">
+            <span>Visa</span>
+            <span>Mastercard</span>
+            <span>PayPal</span>
+            <span>Klarna</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+      <div class="cart-header">
+        <h3>Carrello</h3>
+        <button class="close-cart" id="closeCart">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <!--disegno due linee diagonali che si incrociano formando una X-->
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <div class="cart-empty">Il carrello e vuoto</div>
+      </div>
+      <div class="cart-footer" id="cartFooter" style="display: none">
+        <div class="cart-total">
+          <span>Totale</span>
+          <strong id="cartTotal">€0.00</strong>
+        </div>
+        <button class="checkout-btn">Procedi al checkout</button>
+      </div>
+    </aside>
+
+    <script type="module" src="product-script.js"></script>
+  </body>
+</html>

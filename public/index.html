@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="NEXUS - Hardware e componenti PC gaming premium. RAM, GPU, console e accessori."
+    />
+    <title>NEXUS | Hardware Gaming Premium</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-container">
+        <a href="index.html" class="logo">NEXUS</a>
+        <nav class="nav">
+          <a href="#" class="nav-link">PC Components</a>
+          <a href="#" class="nav-link">Console</a>
+          <a href="#" class="nav-link">Periferiche</a>
+          <a href="#" class="nav-link">Monitor</a>
+          <a href="#" class="nav-link">Offerte</a>
+        </nav>
+        <div class="header-actions">
+          <button class="icon-btn search-btn" aria-label="Cerca">
+            <!--disegno lente di ricerca-->
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+          <button class="icon-btn" aria-label="Account">
+            <!--disegno persona/account-->
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </button>
+          <button class="icon-btn cart-btn" aria-label="Carrello">
+            <!--disegno shopping bag-->
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"
+              ></path>
+              <path d="M3 6h18"></path>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="cart-count">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-modal">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Cerca prodotti..."
+          autofocus
+        />
+        <button class="close-search" id="closeSearch">
+          <!--disegno X per chiudere-->
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Category Bar -->
+    <div class="category-bar">
+      <div class="category-container">
+        <button class="category-chip active" data-category="all">Tutti</button>
+        <button class="category-chip" data-category="ram">RAM</button>
+        <button class="category-chip" data-category="gpu">Schede Video</button>
+        <button class="category-chip" data-category="cpu">Processori</button>
+        <button class="category-chip" data-category="ssd">SSD</button>
+        <button class="category-chip" data-category="case">Case</button>
+        <button class="category-chip" data-category="psu">Alimentatori</button>
+        <button class="category-chip" data-category="cooling">
+          Raffreddamento
+        </button>
+      </div>
+    </div>
+
+    <main>
+      <!-- Featured Banners -->
+      <section class="featured-banners">
+        <a href="#" class="banner banner-ram">
+          <div class="banner-content">
+            <span class="banner-tag">In Evidenza</span>
+            <h2 class="banner-title">RAM DDR5</h2>
+            <p class="banner-subtitle">La nuova generazione</p>
+          </div>
+          <div class="banner-visual">
+            <div class="ram-icon"></div>
+          </div>
+        </a>
+        <a href="#" class="banner banner-gpu">
+          <div class="banner-content">
+            <span class="banner-tag">Novita</span>
+            <h2 class="banner-title">RTX 50 Series</h2>
+            <p class="banner-subtitle">Prestazioni estreme</p>
+          </div>
+          <div class="banner-visual">
+            <div class="gpu-icon"></div>
+          </div>
+        </a>
+      </section>
+
+      <!-- Products Grid -->
+      <section class="products-section">
+        <div class="products-header">
+          <h2 class="section-title">Prodotti</h2>
+          <div class="sort-controls">
+            <select class="sort-select" id="sortSelect">
+              <option value="featured">In evidenza</option>
+              <option value="price-asc">Prezzo: crescente</option>
+              <option value="price-desc">Prezzo: decrescente</option>
+              <option value="name">Nome</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="products-grid" id="productsGrid">
+          <!-- Products will be inserted here by JS -->
+        </div>
+      </section>
+
+      <!-- Features -->
+      <section class="features">
+        <div class="feature">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M5 18H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h3.19M15 6h2.81a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2h-2"
+            ></path>
+            <path
+              d="M14 6H9.5a2.5 2.5 0 0 0 0 5H14v5.5a2.5 2.5 0 0 0 5 0v-.5"
+            ></path>
+          </svg>
+          <div>
+            <strong>Spedizione Gratuita</strong>
+            <span>Ordini sopra 99€</span>
+          </div>
+        </div>
+        <div class="feature">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10"></path>
+          </svg>
+          <div>
+            <strong>Garanzia 2 Anni</strong>
+            <span>Su tutti i prodotti</span>
+          </div>
+        </div>
+        <div class="feature">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path
+              d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+            ></path>
+          </svg>
+          <div>
+            <strong>Supporto 24/7</strong>
+            <span>Assistenza dedicata</span>
+          </div>
+        </div>
+        <div class="feature">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <rect width="20" height="14" x="2" y="5" rx="2"></rect>
+            <path d="M2 10h20"></path>
+          </svg>
+          <div>
+            <strong>Pagamenti Sicuri</strong>
+            <span>Carte, PayPal, Klarna</span>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="/" class="logo">NEXUS</a>
+            <p>
+              Hardware gaming premium dal 2020. Componenti di alta qualita per
+              gamer e professionisti.
+            </p>
+          </div>
+          <div class="footer-links">
+            <h4>Prodotti</h4>
+            <a href="#">RAM</a>
+            <a href="#">Schede Video</a>
+            <a href="#">Processori</a>
+            <a href="#">SSD & Storage</a>
+            <a href="#">Console</a>
+          </div>
+          <div class="footer-links">
+            <h4>Supporto</h4>
+            <a href="#">Contattaci</a>
+            <a href="#">FAQ</a>
+            <a href="#">Spedizioni</a>
+            <a href="#">Resi</a>
+            <a href="#">Garanzia</a>
+          </div>
+          <div class="footer-links">
+            <h4>Azienda</h4>
+            <a href="#">Chi siamo</a>
+            <a href="#">Lavora con noi</a>
+            <a href="#">Privacy</a>
+            <a href="#">Termini</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 NEXUS. Tutti i diritti riservati.</p>
+          <div class="payment-icons">
+            <span>Visa</span>
+            <span>Mastercard</span>
+            <span>PayPal</span>
+            <span>Klarna</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+      <div class="cart-header">
+        <h3>Carrello</h3>
+        <button class="close-cart" id="closeCart">
+          <!--disegno X per chiudere-->
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <div class="cart-empty">Il carrello e vuoto</div>
+      </div>
+      <div class="cart-footer" id="cartFooter" style="display: none">
+        <div class="cart-total">
+          <span>Totale</span>
+          <strong id="cartTotal">€0.00</strong>
+        </div>
+        <button class="checkout-btn">Procedi al checkout</button>
+      </div>
+    </aside>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

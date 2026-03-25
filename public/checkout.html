@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="it">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="NEXUS - Checkout e pagamento per hardware gaming premium."
+    />
+    <title>NEXUS | Checkout</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Header -->
+    <header class="header">
+      <div class="header-container">
+        <a href="index.html" class="logo">NEXUS</a>
+        <nav class="nav">
+          <a href="index.html" class="nav-link">PC Components</a>
+          <a href="index.html" class="nav-link">Console</a>
+          <a href="index.html" class="nav-link">Periferiche</a>
+          <a href="index.html" class="nav-link">Monitor</a>
+          <a href="index.html" class="nav-link">Offerte</a>
+        </nav>
+        <div class="header-actions">
+          <button class="icon-btn search-btn" aria-label="Cerca">
+            <!--disegno lente di ricerca-->
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <circle cx="11" cy="11" r="8"></circle>
+              <path d="m21 21-4.35-4.35"></path>
+            </svg>
+          </button>
+          <button class="icon-btn" aria-label="Account">
+            <!--disegno persona/account-->
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"></path>
+              <circle cx="12" cy="7" r="4"></circle>
+            </svg>
+          </button>
+          <button class="icon-btn cart-btn" aria-label="Carrello">
+            <!--disegno shopping bag-->
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+            >
+              <path
+                d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"
+              ></path>
+              <path d="M3 6h18"></path>
+              <path d="M16 10a4 4 0 0 1-8 0"></path>
+            </svg>
+            <span class="cart-count">0</span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Search Overlay -->
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-modal">
+        <input
+          type="text"
+          class="search-input"
+          placeholder="Cerca prodotti..."
+          autofocus
+        />
+        <button class="close-search" id="closeSearch">
+          <!--disegno X per chiudere-->
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <main>
+      <!-- Breadcrumb -->
+      <nav class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span>></span>
+        <a href="index.html">Carrello</a>
+        <span>></span>
+        <span>Checkout</span>
+      </nav>
+
+      <!-- Checkout Section -->
+      <section class="checkout-section">
+        <div class="checkout-container">
+          <div class="checkout-form">
+            <h2>Dati di Fatturazione</h2>
+            <form id="checkoutForm">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="firstName">Nome</label>
+                  <input type="text" id="firstName" name="firstName" required />
+                </div>
+                <div class="form-group">
+                  <label for="lastName">Cognome</label>
+                  <input type="text" id="lastName" name="lastName" required />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+
+              <div class="form-group">
+                <label for="phone">Telefono</label>
+                <input type="tel" id="phone" name="phone" required />
+              </div>
+
+              <div class="form-group">
+                <label for="address">Indirizzo</label>
+                <input type="text" id="address" name="address" required />
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="city">Città</label>
+                  <input type="text" id="city" name="city" required />
+                </div>
+                <div class="form-group">
+                  <label for="postalCode">Codice Postale</label>
+                  <input
+                    type="text"
+                    id="postalCode"
+                    name="postalCode"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="country">Paese</label>
+                <select id="country" name="country" required>
+                  <option value="">Seleziona paese</option>
+                  <option value="IT">Italia</option>
+                  <option value="FR">Francia</option>
+                  <option value="DE">Germania</option>
+                  <option value="ES">Spagna</option>
+                  <option value="UK">Regno Unito</option>
+                  <option value="US">Stati Uniti</option>
+                </select>
+              </div>
+
+              <h3>Metodo di Pagamento</h3>
+              <div class="payment-methods">
+                <div class="payment-method">
+                  <input
+                    type="radio"
+                    id="card"
+                    name="payment"
+                    value="card"
+                    checked
+                  />
+                  <label for="card">
+                    <div class="payment-icon">
+                      <!--disegno carta di credito-->
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <rect
+                          x="2"
+                          y="4"
+                          width="20"
+                          height="16"
+                          rx="2"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        />
+                        <rect
+                          x="4"
+                          y="10"
+                          width="6"
+                          height="3"
+                          rx="1"
+                          fill="currentColor"
+                        />
+                        <circle cx="16" cy="11.5" r="1" fill="currentColor" />
+                        <circle cx="19" cy="11.5" r="1" fill="currentColor" />
+                      </svg>
+                    </div>
+                    Carta di Credito
+                  </label>
+                </div>
+
+                <div class="payment-method">
+                  <input
+                    type="radio"
+                    id="paypal"
+                    name="payment"
+                    value="paypal"
+                  />
+                  <label for="paypal">
+                    <div class="payment-icon">
+                      <!--disegno portafoglio/PayPal-->
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <path
+                          d="M4 6h16a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2z"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M8 12h8"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                    PayPal
+                  </label>
+                </div>
+
+                <div class="payment-method">
+                  <input
+                    type="radio"
+                    id="klarna"
+                    name="payment"
+                    value="klarna"
+                  />
+                  <label for="klarna">
+                    <div class="payment-icon">
+                      <!--disegno ricevuta/Klarna-->
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                      >
+                        <rect
+                          x="2"
+                          y="6"
+                          width="20"
+                          height="12"
+                          rx="2"
+                          stroke="currentColor"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M6 10h12"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                        <path
+                          d="M6 14h8"
+                          stroke="currentColor"
+                          stroke-width="2"
+                          stroke-linecap="round"
+                        />
+                      </svg>
+                    </div>
+                    Klarna
+                  </label>
+                </div>
+              </div>
+
+              <!-- Payment Form -->
+              <div id="paymentForm" class="payment-form">
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="cardNumber">Numero Carta</label>
+                    <input
+                      type="text"
+                      id="cardNumber"
+                      name="cardNumber"
+                      placeholder="1234 5678 9012 3456"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="cardName">Intestatario</label>
+                    <input
+                      type="text"
+                      id="cardName"
+                      name="cardName"
+                      placeholder="Nome sulla carta"
+                    />
+                  </div>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group">
+                    <label for="expiryDate">Scadenza</label>
+                    <input
+                      type="text"
+                      id="expiryDate"
+                      name="expiryDate"
+                      placeholder="MM/YY"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" name="cvv" placeholder="123" />
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-actions">
+                <button type="submit" class="checkout-btn">
+                  Completa Acquisto
+                </button>
+                <button type="button" class="back-btn" onclick="history.back()">
+                  Torna al Carrello
+                </button>
+              </div>
+            </form>
+          </div>
+
+          <div class="checkout-summary">
+            <h3>Riepilogo Ordine</h3>
+            <div class="summary-items" id="summaryItems">
+              <!-- Items will be inserted here -->
+            </div>
+            <div class="summary-totals">
+              <div class="summary-row">
+                <span>Subtotale</span>
+                <span id="summarySubtotal">€0.00</span>
+              </div>
+              <div class="summary-row">
+                <span>Spedizione</span>
+                <span id="summaryShipping">€0.00</span>
+              </div>
+              <div class="summary-row">
+                <span>IVA (22%)</span>
+                <span id="summaryVAT">€0.00</span>
+              </div>
+              <div class="summary-row total">
+                <span>Totale</span>
+                <span id="summaryTotal">€0.00</span>
+              </div>
+            </div>
+            <div class="secure-badge">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="#10b981"
+                stroke-width="2"
+              >
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                <polyline points="9 12 12 15 15 12" />
+              </svg>
+              <span>Pagamento Sicuro</span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="index.html" class="logo">NEXUS</a>
+            <p>
+              Hardware gaming premium dal 2020. Componenti di alta qualita per
+              gamer e professionisti.
+            </p>
+          </div>
+          <div class="footer-links">
+            <h4>Prodotti</h4>
+            <a href="index.html">RAM</a>
+            <a href="index.html">Schede Video</a>
+            <a href="index.html">Processori</a>
+            <a href="index.html">SSD & Storage</a>
+            <a href="index.html">Console</a>
+          </div>
+          <div class="footer-links">
+            <h4>Supporto</h4>
+            <a href="#">Contattaci</a>
+            <a href="#">FAQ</a>
+            <a href="#">Spedizioni</a>
+            <a href="#">Resi</a>
+            <a href="#">Garanzia</a>
+          </div>
+          <div class="footer-links">
+            <h4>Azienda</h4>
+            <a href="#">Chi siamo</a>
+            <a href="#">Lavora con noi</a>
+            <a href="#">Privacy</a>
+            <a href="#">Termini</a>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>© 2026 NEXUS. Tutti i diritti riservati.</p>
+          <div class="payment-icons">
+            <span>Visa</span>
+            <span>Mastercard</span>
+            <span>PayPal</span>
+            <span>Klarna</span>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="successModal">
+      <div class="modal">
+        <div class="modal-icon success">
+          <!--disegno checkmark successo-->
+          <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
+            <circle cx="12" cy="12" r="10" stroke="#10b981" stroke-width="2" />
+            <path
+              d="M8 12l3 3 7-7"
+              stroke="#10b981"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </div>
+        <h3>Ordine Completato!</h3>
+        <p>
+          Grazie per il tuo acquisto. La conferma è stata inviata alla tua
+          email.
+        </p>
+        <div class="modal-actions">
+          <button
+            class="modal-btn primary"
+            onclick="window.location.href = 'index.html'"
+          >
+            Torna allo Shop
+          </button>
+          <button class="modal-btn secondary" onclick="closeModal()">
+            Chiudi
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-overlay" id="cartOverlay"></div>
+    <aside class="cart-sidebar" id="cartSidebar">
+      <div class="cart-header">
+        <h3>Carrello</h3>
+        <button class="close-cart" id="closeCart">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+          >
+            <path d="M18 6 6 18"></path>
+            <path d="m6 6 12 12"></path>
+          </svg>
+        </button>
+      </div>
+      <div class="cart-items" id="cartItems">
+        <div class="cart-empty">Il carrello è vuoto</div>
+      </div>
+      <div class="cart-footer" id="cartFooter" style="display: none">
+        <div class="cart-total">
+          <span>Totale</span>
+          <strong id="cartTotal">€0.00</strong>
+        </div>
+        <button class="checkout-btn">Procedi al checkout</button>
+      </div>
+    </aside>
+
+    <script type="module" src="checkout-script.js"></script>
+  </body>
+</html>
