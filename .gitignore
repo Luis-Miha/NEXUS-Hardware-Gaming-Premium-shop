@@ -49,4 +49,4 @@ jspm_packages/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
+.env".git_disabled/"  

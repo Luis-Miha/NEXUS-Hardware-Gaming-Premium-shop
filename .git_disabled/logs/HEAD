@@ -1,0 +1,5 @@
+0000000000000000000000000000000000000000 32391f29332f76fca92f2a6a4c94aff6183b4e89 luis_ <luis_99@hotmail.it> 1774449164 +0100	commit (initial): Initial commit: NEXUS Hardware Gaming Premium shop
+32391f29332f76fca92f2a6a4c94aff6183b4e89 d5b8841e22d0f3e2f624d39e1304c658f91b330a luis_ <luis_99@hotmail.it> 1774449627 +0100	commit: Aggiunto README.md completo per il progetto NEXUS Hardware Gaming Premium Shop
+d5b8841e22d0f3e2f624d39e1304c658f91b330a 203a8ab0d29a1ed13f8b719aa0aec8db8d0b765f luis_ <luis_99@hotmail.it> 1774450353 +0100	commit: Aggiunto link demo Vercel al README
+203a8ab0d29a1ed13f8b719aa0aec8db8d0b765f 58042f43f8f3f87d02df3a71ab099e857c135c0e luis_ <luis_99@hotmail.it> 1774452104 +0100	pull --tags origin master: Fast-forward
+58042f43f8f3f87d02df3a71ab099e857c135c0e 4bb41a59d58928e2696789c1a854a658ff0d4f6b luis_ <luis_99@hotmail.it> 1774453263 +0100	commit: Add .gitignore file
