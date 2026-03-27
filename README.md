@@ -1,148 +1,146 @@
-# NEXUS - Hardware Gaming Premium Shop
+# 🎮 NEXUS — Hardware Gaming Premium Shop
 
-![NEXUS Logo](https://img.shields.io/badge/NEXUS-Hardware_Gaming_Premium-blue?style=for-the-badge&logo=gamejolt)
+[![Live Demo](https://img.shields.io/badge/LIVE_DEMO-green?style=flat-square)](https://nexus-hardware-gaming-premium-shop.vercel.app/)
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=flat-square&logo=html5)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=flat-square&logo=css3)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-🔗 **[LIVE DEMO](https://nexus-hardware-gaming-premium-shop.vercel.app/)**
+> High-performance e-commerce for premium gaming hardware with dynamic filters and shopping cart.
 
-## 🎮 Descrizione del Progetto
+## 📋 Overview
 
-**NEXUS** è un e-commerce moderno e responsive per la vendita di hardware gaming premium. Il sito offre un'esperienza di acquisto fluida e intuitiva per appassionati di gaming e professionisti alla ricerca di componenti PC di alta qualità.
+**NEXUS** is a modern, responsive e-commerce website for premium gaming hardware. It features a product catalog with dynamic filtering, smart shopping cart with localStorage persistence, advanced search, and a complete checkout flow.
 
-### ✨ Caratteristiche Principali
+## ✨ Features
 
-- 🛒 **Carrello Intelligente** - Sistema di carrello con persistenza in localStorage
-- 🔍 **Ricerca Avanzata** - Overlay di ricerca per trovare rapidamente i prodotti
-- 📱 **Design Responsive** - Ottimizzato per desktop, tablet e mobile
-- 🎯 **Filtri per Categoria** - RAM, GPU, CPU, SSD, Case, Alimentatori, Raffreddamento
-- 📊 **Ordinamento Prodotti** - Per prezzo (crescente/decrescente) e nome
-- 💳 **Checkout Completo** - Processo di acquisto guidato
-- 🌟 **Rating e Recensioni** - Sistema di valutazione prodotti
-- 🏷️ **Badge Prodotti** - "Hot", "Nuovo", "Offerta"
-- 📄 **Pagine Dettaglio** - Informazioni complete su ogni prodotto
+- **Smart Shopping Cart** — Add/remove products with localStorage persistence
+- **Advanced Search** — Fullscreen overlay for quick product lookup
+- **Category Filters** — RAM, GPU, CPU, SSD, Case, PSU, Cooling
+- **Product Sorting** — By price (asc/desc) and name
+- **Product Badges** — "Hot", "New", "Sale" labels
+- **Product Detail Pages** — Full specifications and gallery
+- **Complete Checkout** — Multi-step purchase process
+- **Responsive Design** — Optimized for desktop, tablet, and mobile
 
-## 🛠️ Tecnologie Utilizzate
+## 🛠️ Tech Stack
 
-| Tecnologia            | Utilizzo                           |
-| --------------------- | ---------------------------------- |
-| **HTML5**             | Struttura semantica del sito       |
-| **CSS3**              | Styling moderno con Flexbox e Grid |
-| **JavaScript (ES6+)** | Logica dell'applicazione           |
-| **Serve**             | Server statico per sviluppo        |
-| **Google Fonts**      | Tipografia Inter                   |
-| **SVG Icons**         | Icone vettoriali leggere           |
+| Technology      | Purpose                        |
+| --------------- | ------------------------------ |
+| HTML5           | Semantic structure             |
+| CSS3            | Modern styling (Flexbox, Grid) |
+| JavaScript ES6+ | Application logic              |
+| Google Fonts    | Typography (Inter)             |
+| SVG Icons       | Lightweight vector icons       |
 
-## 📁 Struttura del Progetto
+## 🚀 Getting Started
 
-```
-NEXUS-Hardware-Gaming-Premium-shop/
-├── package.json
-└── public/
-    ├── index.html          # Homepage principale
-    ├── product.html        # Pagina dettaglio prodotto
-    ├── checkout.html       # Pagina checkout
-    ├── styles.css          # Stili CSS
-    ├── script.js           # JavaScript principale
-    ├── product-script.js   # Logica pagina prodotto
-    ├── checkout-script.js  # Logica checkout
-    └── shared/
-        ├── data.js         # Database prodotti
-        ├── cart.js         # Gestione carrello
-        └── utils.js        # Funzioni utility
+```bash
+# Clone the repository
+git clone https://github.com/Luis-Miha/NEXUS-Hardware-Gaming-Premium-Shop.git
+
+# Navigate to directory
+cd NEXUS-Hardware-Gaming-Premium-Shop
+
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
 ```
 
-## 🚀 Installazione e Avvio
+## 📁 Project Structure
 
-### Prerequisiti
+```
+NEXUS-Hardware-Gaming-Premium-Shop/
+├── public/
+│   ├── index.html          # Homepage
+│   ├── product.html        # Product detail
+│   ├── checkout.html       # Checkout page
+│   ├── styles.css          # Main styles
+│   ├── script.js           # Main JS
+│   ├── product-script.js   # Product page JS
+│   ├── checkout-script.js  # Checkout JS
+│   └── shared/
+│       ├── data.js         # Product database
+│       ├── cart.js         # Cart logic
+│       └── utils.js        # Utilities
+└── package.json            # Dependencies
+```
 
-- **Node.js** (versione 14 o superiore)
-- **npm** (incluso con Node.js)
+## 🛍️ Product Categories
 
-## 🛍️ Categorie Prodotti
+- **RAM** — High-performance DDR5 memory (G.Skill, Corsair, Kingston, Crucial)
+- **Graphics Cards** — Latest NVIDIA and AMD GPUs
+- **Processors** — Intel and AMD CPUs for gaming and workstations
+- **SSD** — Ultra-fast NVMe storage
+- **Cases** — Premium cases with excellent airflow
+- **PSUs** — High-efficiency modular power supplies
+- **Cooling** — Air and liquid cooling solutions
 
-- **RAM** - Memorie DDR5 ad alte prestazioni (G.Skill, Corsair, Kingston, Crucial)
-- **Schede Video** - GPU NVIDIA e AMD di ultima generazione
-- **Processori** - CPU Intel e AMD per gaming e workstation
-- **SSD** - Storage NVMe ultra-veloce
-- **Case** - Cabinet con design premium e ottimo airflow
-- **Alimentatori** - PSU modulari ad alta efficienza
-- **Raffreddamento** - Soluzioni di dissipazione ad aria e liquido
+## 💡 Technical Features
 
-## 💡 Funzionalità Tecniche
+### Cart System
 
-### Sistema di Carrello
+- Add/remove products
+- Automatic total calculation
+- localStorage persistence
+- Interactive sidebar
 
-- Aggiunta/rimozione prodotti
-- Calcolo automatico totale
-- Persistenza dati con localStorage
-- Sidebar carrello interattiva
+### Search & Filters
 
-### Ricerca e Filtri
+- Fullscreen search overlay
+- 8 category filters
+- Sort by price and name
+- Dynamic grid updates
 
-- Overlay di ricerca fullscreen
-- Filtri per categoria (8 categorie)
-- Ordinamento per prezzo e nome
-- Aggiornamento dinamico griglia prodotti
+### Product Pages
 
-### Pagine Prodotto
-
-- Galleria immagini
-- Specifiche tecniche dettagliate
-- Compatibilità componenti
-- Prodotti correlati
-- Aggiunta al carrello
+- Image gallery
+- Detailed specifications
+- Compatibility info
+- Related products
+- Add to cart
 
 ### Checkout
 
-- Riepilogo ordine
-- Form di spedizione
-- Selezione metodo di pagamento
-- Conferma ordine
+- Order summary
+- Shipping form
+- Payment selection
+- Order confirmation
 
 ## 🎨 Design System
 
-### Colori
+### Colors
 
-- **Primario**: `#0a0a0a` (nero)
-- **Secondario**: `#ffffff` (bianco)
-- **Accent**: `#3b82f6` (blu)
-- **Badge Hot**: `#ef4444` (rosso)
-- **Badge New**: `#10b981` (verde)
-- **Badge Sale**: `#f59e0b` (arancione)
+- **Primary**: `#0a0a0a` (dark)
+- **Secondary**: `#ffffff` (white)
+- **Accent**: `#3b82f6` (blue)
+- **Hot Badge**: `#ef4444` (red)
+- **New Badge**: `#10b981` (green)
+- **Sale Badge**: `#f59e0b` (orange)
 
-### Tipografia
+### Typography
 
-- **Font Family**: Inter (Google Fonts)
-- **Pesi**: 400, 500, 600, 700
+- **Font**: Inter (Google Fonts)
+- **Weights**: 400, 500, 600, 700
 
 ## 📱 Responsive Design
 
-Il sito è ottimizzato per:
+- **Desktop**: Full layout with cart sidebar
+- **Tablet**: Adaptive grid and compact navigation
+- **Mobile**: Hamburger menu and single-column layout
 
-- **Desktop**: Layout completo con sidebar carrello
-- **Tablet**: Grid adattiva e navigazione compatta
-- **Mobile**: Menu hamburger e layout single-column
+## 👨‍💻 Author
 
-
-## 📈 Funzionalità Future
-
-- [ ] Autenticazione utenti
-- [ ] Wishlist prodotti
-- [ ] Sistema di recensioni
-- [ ] Filtri avanzati (prezzo, brand, rating)
-- [ ] Integrazione pagamento reale
-- [ ] Pannello amministrativo
-- [ ] Notifiche in-app
-- [ ] Supporto multi-lingua
-
-## 👨‍💻 Autore
-
-**Luis Mihalache**
+**George Luis Mihalache** — Junior Front-End Developer
 
 - GitHub: [@Luis-Miha](https://github.com/Luis-Miha)
+- Email: Luis_99@hotmail.it
+- LinkedIn: [george-luis-mihalache](https://www.linkedin.com/in/george-luis-mihalache-318058387/)
 
 ---
 
 <div align="center">
-  <p>⭐ Se ti piace il progetto, lascia una stella su GitHub! ⭐</p>
-  <p>Built with ❤️ by Luis Mihalache</p>
+  <p>⭐ Star this project if you find it useful!</p>
+  <p>Built with ❤️ by George Luis Mihalache</p>
 </div>
